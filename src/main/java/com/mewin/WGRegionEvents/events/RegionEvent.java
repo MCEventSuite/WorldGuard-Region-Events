@@ -31,6 +31,13 @@ public abstract class RegionEvent extends PlayerEvent {
         this.parentEvent = parent;
     }
 
+    public RegionEvent(ProtectedRegion region, Player player, PlayerEvent parent)
+    {
+        super(player);
+        this.region = region;
+        this.parentEvent = parent;
+    }
+
     @Override
     public HandlerList getHandlers() {
         return handlerList;
@@ -39,6 +46,10 @@ public abstract class RegionEvent extends PlayerEvent {
     public ProtectedRegion getRegion()
     {
         return region;
+    }
+
+    public String getRegionId() {
+        return region.getId();
     }
     
     public static HandlerList getHandlerList()
@@ -56,9 +67,11 @@ public abstract class RegionEvent extends PlayerEvent {
      * @see PlayerMoveEvent
      * @see PlayerTeleportEvent
      * @see PlayerQuitEvent
-     * @see PlayerKickEvent
+     * @see org.bukkit.event.player.PlayerKickEvent
      * @see PlayerJoinEvent
      * @see PlayerRespawnEvent
+     * @see org.bukkit.event.block.BlockBreakEvent
+     * @see org.bukkit.event.block.BlockPlaceEvent
      * @return 
      */
     public PlayerEvent getParentEvent()
