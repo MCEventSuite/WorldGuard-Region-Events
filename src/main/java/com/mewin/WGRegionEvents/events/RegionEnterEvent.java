@@ -19,15 +19,12 @@ public class RegionEnterEvent extends RegionEvent implements Cancellable
      * @param player the player who triggered the event
      * @param movement the type of movement how the player enters the region
      */
-    public RegionEnterEvent(ProtectedRegion region, Player player, MovementWay movement, PlayerEvent parent)
-    {
+    public RegionEnterEvent(ProtectedRegion region, Player player, MovementWay movement, PlayerEvent parent) {
         super(region, player, movement, parent);
         cancelled = false;
         cancellable = true;
         
-        if (movement == MovementWay.SPAWN
-            || movement == MovementWay.DISCONNECT)
-        {
+        if (movement == MovementWay.SPAWN || movement == MovementWay.DISCONNECT) {
             cancellable = false;
         }
     }
@@ -38,10 +35,8 @@ public class RegionEnterEvent extends RegionEvent implements Cancellable
      * @param cancelled true if the player should be stopped from moving into the region
      */
     @Override
-    public void setCancelled(boolean cancelled)
-    {
-        if (!this.cancellable)
-        {
+    public void setCancelled(boolean cancelled) {
+        if (!this.cancellable) {
             return;
         }
         
@@ -53,8 +48,7 @@ public class RegionEnterEvent extends RegionEvent implements Cancellable
      * @return true if this event will be cancelled and the player will be stopped from moving
      */
     @Override
-    public boolean isCancelled()
-    {
+    public boolean isCancelled() {
         return this.cancelled;
     }
     
@@ -63,17 +57,14 @@ public class RegionEnterEvent extends RegionEvent implements Cancellable
      * sometimes you can not cancel an event, i.e. if a player entered a region by spawning inside of it
      * @return true, if you can cancel this event
      */
-    public boolean isCancellable()
-    {
+    public boolean isCancellable() {
         return this.cancellable;
     }
     
-    protected void setCancellable(boolean cancellable)
-    {
+    protected void setCancellable(boolean cancellable) {
         this.cancellable = cancellable;
         
-        if (!this.cancellable)
-        {
+        if (!this.cancellable) {
             this.cancelled = false;
         }
     }

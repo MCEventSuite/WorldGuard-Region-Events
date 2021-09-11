@@ -17,8 +17,7 @@ public class RegionLeftEvent extends RegionEvent
      * @param player the player who triggered the event
      * @param movement the type of movement how the player left the region
      */
-    public RegionLeftEvent(ProtectedRegion region, Player player, MovementWay movement, PlayerEvent parent)
-    {
+    public RegionLeftEvent(ProtectedRegion region, Player player, MovementWay movement, PlayerEvent parent) {
         super(region, player, movement, parent);
     }
 }

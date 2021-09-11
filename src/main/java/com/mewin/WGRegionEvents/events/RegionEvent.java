@@ -23,16 +23,14 @@ public abstract class RegionEvent extends PlayerEvent {
     private MovementWay movement;
     public PlayerEvent parentEvent;
 
-    public RegionEvent(ProtectedRegion region, Player player, MovementWay movement, PlayerEvent parent)
-    {
+    public RegionEvent(ProtectedRegion region, Player player, MovementWay movement, PlayerEvent parent) {
         super(player);
         this.region = region;
         this.movement = movement;
         this.parentEvent = parent;
     }
 
-    public RegionEvent(ProtectedRegion region, Player player, PlayerEvent parent)
-    {
+    public RegionEvent(ProtectedRegion region, Player player, PlayerEvent parent) {
         super(player);
         this.region = region;
         this.parentEvent = parent;
@@ -43,8 +41,7 @@ public abstract class RegionEvent extends PlayerEvent {
         return handlerList;
     }
     
-    public ProtectedRegion getRegion()
-    {
+    public ProtectedRegion getRegion() {
         return region;
     }
 
@@ -52,13 +49,11 @@ public abstract class RegionEvent extends PlayerEvent {
         return region.getId();
     }
     
-    public static HandlerList getHandlerList()
-    {
+    public static HandlerList getHandlerList() {
         return handlerList;
     }
     
-    public MovementWay getMovementWay()
-    {
+    public MovementWay getMovementWay() {
         return this.movement;
     }
 
@@ -74,8 +69,7 @@ public abstract class RegionEvent extends PlayerEvent {
      * @see org.bukkit.event.block.BlockPlaceEvent
      * @return 
      */
-    public PlayerEvent getParentEvent()
-    {
+    public PlayerEvent getParentEvent() {
         return parentEvent;
     }
 }

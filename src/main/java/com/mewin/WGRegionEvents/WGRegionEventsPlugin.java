@@ -10,8 +10,7 @@ public class WGRegionEventsPlugin extends JavaPlugin {
     private WGRegionEventsListener listener;
     
     @Override
-    public void onEnable()
-    {        
+    public void onEnable() {        
         listener = new WGRegionEventsListener(this);
         
         getServer().getPluginManager().registerEvents(listener, this);
