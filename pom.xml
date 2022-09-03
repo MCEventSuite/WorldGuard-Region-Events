@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.imabad.mceventsuite</groupId>
-    <artifactId>WGRegionEvents</artifactId>
-    <version>1.4</version>
+    <artifactId>wgregionevents</artifactId>
+    <version>1.4-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>WGRegionEvents</name>
 
