@@ -40,7 +40,7 @@
         <repository>
             <id>github</id>
             <name>GitHub MCEventSuite Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/MCEventSuite/WorldGuard-Region-Events</url>
+            <url>https://maven.pkg.github.com/mceventsuite/worldguard-region-events</url>
         </repository>
     </distributionManagement>
     <dependencies>
