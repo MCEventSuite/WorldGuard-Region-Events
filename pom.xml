@@ -33,10 +33,16 @@
 
         <repository>
             <id>mewin-repo</id>
-            <url>http://maven.mewin.de</url>
+            <url>https://maven.mewin.de</url>
         </repository>
   </repositories>
-  
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub MCEventSuite Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/MCEventSuite/WorldGuard-Region-Events</url>
+        </repository>
+    </distributionManagement>
     <dependencies>
         <!-- Paper Dependency -->
         <dependency>
@@ -47,18 +53,18 @@
         </dependency>
 
         <!-- Spigot Dependency -->
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.spigotmc</groupId>-->
+<!--            <artifactId>spigot</artifactId>-->
+<!--            <version>1.16.5-R0.1-SNAPSHOT</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
 
         <!-- WorldGuard Dependency -->
         <dependency>
             <groupId>com.sk89q.worldguard</groupId>
             <artifactId>worldguard-bukkit</artifactId>
-            <version>7.0.4-SNAPSHOT</version>
+            <version>7.0.8-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
